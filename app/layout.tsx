@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Free AI Background Remover — Remove Image Background Instantly, No Signup",
   description:
     "Remove image backgrounds free, no signup, no watermark. AI-powered background remover runs in your browser — your image never leaves your device. Download transparent PNG.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dzungnguyen.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://rmbg.online"),
   openGraph: {
     title: "Free AI Background Remover — Remove Image Background Instantly",
     description:

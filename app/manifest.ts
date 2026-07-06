@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "AI Background Remover — Free Online Tool",
-    short_name: "Background Remover",
+    name: "rmbg.online — AI Background Remover",
+    short_name: "rmbg.online",
     description:
       "Remove image backgrounds free, no signup, no watermark. AI runs in your browser — 100% private.",
     start_url: "/",

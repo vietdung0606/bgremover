@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dzungnguyen.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://rmbg.online";
 const SITE_NAME = "AI Background Remover";
 
 export function buildMetadata({
