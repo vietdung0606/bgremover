@@ -11,16 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/en`,
+      url: `${SITE_URL}/blog/how-to-remove-background-from-photo`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: `${SITE_URL}/vi`,
+      url: `${SITE_URL}/blog/best-free-background-remover-tools`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/blog/remove-bg-alternatives-free`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }
