@@ -45,9 +45,6 @@ export const metadata: Metadata = {
     images: ["/api/og"],
   },
   robots: { index: true, follow: true },
-  verification: {
-    google: "a3UJIoDSQYwoomnz4fSD8n5BcnoXo4_FLl2GQbKFrXI",
-  },
   icons: { icon: "/favicon.ico" },
   manifest: "/manifest.json",
   appleWebApp: {
@@ -68,6 +65,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="a3UJIoDSQYwoomnz4fSD8n5BcnoXo4_FLl2GQbKFrXI" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
