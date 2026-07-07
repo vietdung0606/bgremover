@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     images: ["/api/og"],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "a3UJIoDSQYwoomnz4fSD8n5BcnoXo4_FLl2GQbKFrXI",
+  },
   icons: { icon: "/favicon.ico" },
   manifest: "/manifest.json",
   appleWebApp: {
