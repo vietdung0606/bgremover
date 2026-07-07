@@ -8,6 +8,7 @@ import ImageCropper from "./image-cropper";
 import SocialShare from "./social-share";
 import AiBackgroundGenerator from "./ai-background-generator";
 import MagicEraser from "./magic-eraser";
+import ImageUpscaler from "./image-upscaler";
 
 interface Props {
   imageFile: File | null;
@@ -19,7 +20,7 @@ interface Props {
 }
 
 type Status = "idle" | "cropping" | "loading" | "done" | "error";
-type Tab = "compare" | "background" | "ai-bg" | "magic-eraser" | "compress";
+type Tab = "compare" | "background" | "ai-bg" | "magic-eraser" | "upscale" | "compress";
 
 export default function ImageProcessor({ imageFile, t }: Props) {
   const [status, setStatus] = useState<Status>("idle");
@@ -108,6 +109,7 @@ export default function ImageProcessor({ imageFile, t }: Props) {
     { key: "background", label: "Solid BG" },
     { key: "ai-bg", label: "AI BG" },
     { key: "magic-eraser", label: "Magic Eraser" },
+    { key: "upscale", label: "Upscale" },
     { key: "compress", label: "Compress" },
   ];
 
@@ -225,6 +227,10 @@ export default function ImageProcessor({ imageFile, t }: Props) {
               onResultUpdate={handleResultUpdate}
               onDownload={handleDownload}
             />
+          )}
+
+          {activeTab === "upscale" && (
+            <ImageUpscaler resultUrl={resultUrl} onDownload={handleDownload} />
           )}
 
           {activeTab === "compress" && (

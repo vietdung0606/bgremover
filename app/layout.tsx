@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { jsonLd } from "./lib/metadata";
@@ -27,12 +28,21 @@ export const metadata: Metadata = {
       "Remove image backgrounds free, no signup, no watermark. AI runs in your browser. 100% private.",
     siteName: "AI Background Remover",
     type: "website",
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Remove BG Online — Free AI Background Remover",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Free AI Background Remover — No Signup, No Watermark",
     description:
       "Remove image backgrounds free, no signup, no watermark. AI runs in your browser. 100% private.",
+    images: ["/api/og"],
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
@@ -64,6 +74,7 @@ export default function RootLayout({
         <SerwistProvider />
         {children}
         <Footer tagline={en.footer.tagline} />
+        <Analytics />
       </body>
     </html>
   );
